@@ -2,21 +2,13 @@ import React, { Component } from 'react'
 
 class Die extends Component {
     render() {
+        console.log(this.props.rolling )
         return (
             <div>
-                <i className={`fas fa-dice-one`}></i>
+                <i className={`fas fa-dice-${this.props.state} ${this.props.rolling ? 'animating' : ''}`}></i>
             </div>
         )
     }
 }
 
-// const Die = () => {
-//     const array = ['one', 'two', 'three', 'four', 'five', 'six'];
-//   return (
-//     <div>
-//         <i className={`fas fa-dice-${array[Math.floor(Math.random() * array.length)]}`}></i>
-//     </div>
-//   )
-// }
-
-export default Die
+export default Die;
